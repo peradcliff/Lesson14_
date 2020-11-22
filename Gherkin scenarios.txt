@@ -1,0 +1,71 @@
+Feature: Retirement Calculator
+	Calculating the age someone will
+  retire based on the year and
+  month they were born.
+
+  
+  Scenario:
+	Given a birth year less than 1900
+	When the user enters this dates
+	Then the program will raise a value error
+
+  Scenario:
+	Given a birth year greater than or equal to 3000
+	When the user enters this dates
+	Then the program will raise a value error
+
+  Scenario:
+	Given a birth year less than 1937
+	When the user enters this dates
+	Then the program will assert 1936 equals respetive retirement age
+
+  Scenario:
+	Given a birth year in range of 1937 and 1943
+	When the user enters this dates
+	Then the program will asert birth year equals respetive retirement age
+
+  Scenario:
+	Given a birth year in range of 1943 and 1954
+	When the user enters this dates
+	Then the program will asert birth year equals respetive retirement age
+
+  Scenario:
+	Given a birth year in range of 1954 and 1960
+	When the user enters this dates
+	Then the program will asert birth year equals respetive retirement age
+
+  Scenario:
+	Given a birth year above 1959
+	When the user enters this dates
+	Then the program will asert birth year equals respetive retirement age
+
+  Scenario:
+	Given a birth year above 1900
+	When the user enters this dates
+	Then the program will raise a value error
+
+
+  Scenario:
+	Given a birth month is greater than 12
+When the user enters this dates
+Then the program will raise a value error
+
+  Scenario:
+   	Given a birth month is less than 1
+    	When the user enters this dates
+    	Then the program will raise a value error
+
+  Scenario:
+    	Given Someone has a birth year and month
+    	When  the user enters their birth year and month
+    	Then  the program determines the year and month they will retire
+
+    # example of birth year of 2000 and birth month of 07
+  Scenario:
+    	Given Birth year is 2000 and birth month July
+	When the user enters these dates
+    	Then the program determines they will determine retirement age at 67 in July of 2067
+ Scenario:
+    	Given User enters their birth month and year
+    	When the user hits enter after each it will process it
+    	Then the program will determine the date of retirement to the month and year
